@@ -28,15 +28,35 @@
       margin: auto;
       padding: 1.5rem;
     }
-img.avatar {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-  object-fit: cover;
-  margin: 0 auto 1rem;
-  border: none;
+  img.avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: none;
+  }
+    .photo-container {
+  position: relative;
+  display: inline-block;
 }
+
+  .photo-container img {
+    display: block;
+    width: 100%; /* レスポンシブにするなら100% */
+    height: auto;
+    }
+  .caption {
+    position: absolute;
+    left: 10px;       /* 左からの距離 */
+    bottom: 10px;     /* 下からの距離 */
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    }
     section {
       margin-bottom: 2rem;
     }
@@ -66,7 +86,11 @@ img.avatar {
   </header>
 
   <main>
+    <div class="photo-container">
     <img src="assets/image.jpg" alt="プロフィール画像" class="avatar">
+  　<div class="caption"> Jan. 17, 2025 at Katase, Kanagawa(Pixel 7)</div>
+　　</div>
+
     <section>
       <h2>About</h2>
       <p>Tomonori Kano is a Ph.D student at Okayama University, Japan.</p>
