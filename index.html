@@ -2,9 +2,94 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>あなたの名前 – プロフィール</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    header {
+      background: #0ea5e9;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      max-width: 720px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+    img.avatar {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 3px solid #38bdf8;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #0369a1;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      padding: 1rem;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
 </head>
 <body>
-  test
+  <header>
+    <h1>あなたの名前</h1>
+    <p>博士課程（生命科学） | ○○大学 △△研究科</p>
+  </header>
+
+  <main>
+    <img src="assets/avatar.png" alt="プロフィール画像" class="avatar">
+
+    <section>
+      <h2>自己紹介</h2>
+      <p>ここに簡単な自己紹介や研究テーマを書きます。専門分野や興味のあること、今取り組んでいるプロジェクトなど。</p>
+    </section>
+
+    <section>
+      <h2>リンク</h2>
+      <ul>
+        <li><a href="cv.pdf">CV / 履歴書（PDF）</a></li>
+        <li><a href="https://github.com/あなたのGitHub名">GitHub</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> あなたの名前
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
